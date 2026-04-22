@@ -10,16 +10,16 @@
   }
 
   body {
-    @apply bg-cream-200 text-midnight-500 font-sans;
+    @apply bg-cream-200 text-charcoal-500 font-sans;
   }
 
   ::selection {
-    @apply bg-terra-300 text-white;
+    @apply bg-ember-300 text-white;
   }
 
   * {
     scrollbar-width: thin;
-    scrollbar-color: #C75B3A #F0EBE3;
+    scrollbar-color: #C4652A #F5F0E8;
   }
 }
 
@@ -58,7 +58,7 @@
   }
   .hover-lift:hover {
     transform: translateY(-4px);
-    box-shadow: 0 20px 40px -12px rgba(10, 22, 40, 0.18);
+    box-shadow: 0 20px 40px -12px rgba(44, 24, 16, 0.15);
   }
 
   .img-reveal {
@@ -76,7 +76,7 @@
     bottom: -4px;
     width: 40px;
     height: 2px;
-    background-color: #C75B3A;
+    background-color: #C4652A;
   }
 }
 

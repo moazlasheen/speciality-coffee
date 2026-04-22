@@ -97,16 +97,16 @@ function App() {
 
       {/* Cookie Consent */}
       {showCookieConsent && (
-        <div className="fixed bottom-0 left-0 right-0 z-50 bg-midnight-500/97 backdrop-blur-md border-t border-midnight-400/30">
+        <div className="fixed bottom-0 left-0 right-0 z-50 bg-roast-500/97 backdrop-blur-md border-t border-roast-400/30">
           <div className="max-w-[1400px] mx-auto px-5 md:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-body-sm font-sans text-cream-300/80 text-center sm:text-left">
               We use cookies to enhance your experience and analyze site traffic. By continuing, you agree to our{' '}
-              <button className="text-terra-200 underline underline-offset-2 hover:text-terra-100">privacy policy</button>.
+              <button className="text-ember-200 underline underline-offset-2 hover:text-ember-100">privacy policy</button>.
             </p>
             <div className="flex gap-3 flex-shrink-0">
               <button
                 onClick={acceptCookies}
-                className="px-5 py-2.5 bg-terra-300 text-white text-body-sm font-sans font-medium rounded-sm hover:bg-terra-400 transition-colors"
+                className="px-5 py-2.5 bg-ember-300 text-white text-body-sm font-sans font-medium rounded-sm hover:bg-ember-400 transition-colors"
               >
                 Accept
               </button>

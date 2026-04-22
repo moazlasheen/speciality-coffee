@@ -56,8 +56,8 @@ export default function ShopPage({ onAddToCart, onViewProduct }: ShopPageProps) 
           <SectionLabel label="Shop" className="mb-4" />
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
             <div>
-              <h1 className="font-serif text-h1 text-midnight-500 mb-2">Our Coffee</h1>
-              <p className="text-body font-sans text-midnight-200 max-w-lg">
+              <h1 className="font-serif text-h1 text-roast-500 mb-2">Our Coffee</h1>
+              <p className="text-body font-sans text-charcoal-300 max-w-lg">
                 Single-origin coffees roasted to order. Each bag is stamped with its roast date and ships within 48 hours.
               </p>
             </div>
@@ -66,14 +66,14 @@ export default function ShopPage({ onAddToCart, onViewProduct }: ShopPageProps) 
                 onClick={() => setShowFilters(!showFilters)}
                 className={`flex items-center gap-2 px-4 py-2.5 border rounded-sm text-body-sm font-sans font-medium transition-colors ${
                   showFilters || activeFilterCount > 0
-                    ? 'border-terra-300 text-terra-300 bg-terra-50'
-                    : 'border-cream-400 text-midnight-400 hover:border-midnight-200'
+                    ? 'border-ember-300 text-ember-300 bg-ember-50'
+                    : 'border-cream-400 text-roast-400 hover:border-roast-300'
                 }`}
               >
                 <SlidersHorizontal className="w-3.5 h-3.5" />
                 Filters
                 {activeFilterCount > 0 && (
-                  <span className="w-5 h-5 bg-terra-300 text-white text-[10px] rounded-full flex items-center justify-center">
+                  <span className="w-5 h-5 bg-ember-300 text-white text-[10px] rounded-full flex items-center justify-center">
                     {activeFilterCount}
                   </span>
                 )}
@@ -81,7 +81,7 @@ export default function ShopPage({ onAddToCart, onViewProduct }: ShopPageProps) 
               <select
                 value={sort}
                 onChange={e => setSort(e.target.value)}
-                className="px-4 py-2.5 border border-cream-400 rounded-sm text-body-sm font-sans text-midnight-400 bg-cream-100 focus:outline-none focus:border-terra-300"
+                className="px-4 py-2.5 border border-cream-400 rounded-sm text-body-sm font-sans text-roast-400 bg-cream-100 focus:outline-none focus:border-ember-300"
               >
                 {sortOptions.map(opt => (
                   <option key={opt} value={opt}>
@@ -97,11 +97,11 @@ export default function ShopPage({ onAddToCart, onViewProduct }: ShopPageProps) 
         {showFilters && (
           <div className="mb-10 p-6 md:p-8 bg-cream-100 border border-cream-400 rounded-sm">
             <div className="flex items-center justify-between mb-6">
-              <h3 className="font-serif text-lg text-midnight-500">Filter By</h3>
+              <h3 className="font-serif text-lg text-roast-500">Filter By</h3>
               {activeFilterCount > 0 && (
                 <button
                   onClick={clearFilters}
-                  className="flex items-center gap-1 text-body-sm font-sans text-terra-300 hover:text-terra-400"
+                  className="flex items-center gap-1 text-body-sm font-sans text-ember-300 hover:text-ember-400"
                 >
                   <X className="w-3 h-3" />
                   Clear all
@@ -111,7 +111,7 @@ export default function ShopPage({ onAddToCart, onViewProduct }: ShopPageProps) 
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {/* Roast */}
               <div>
-                <p className="text-caption uppercase tracking-[0.15em] text-midnight-200 font-sans font-medium mb-3">Roast Level</p>
+                <p className="text-caption uppercase tracking-[0.15em] text-charcoal-200 font-sans font-medium mb-3">Roast Level</p>
                 <div className="flex flex-wrap gap-2">
                   {roastFilters.map(r => (
                     <button
@@ -119,8 +119,8 @@ export default function ShopPage({ onAddToCart, onViewProduct }: ShopPageProps) 
                       onClick={() => setRoast(r)}
                       className={`px-3 py-1.5 text-[11px] font-sans font-medium uppercase tracking-[0.08em] rounded-sm border transition-colors ${
                         roast === r
-                          ? 'bg-midnight-500 text-cream-100 border-midnight-500'
-                          : 'border-cream-400 text-midnight-400 hover:border-midnight-200'
+                          ? 'bg-roast-500 text-cream-100 border-roast-500'
+                          : 'border-cream-400 text-roast-400 hover:border-roast-300'
                       }`}
                     >
                       {r === 'all' ? 'All' : r.replace('-', ' ')}
@@ -130,7 +130,7 @@ export default function ShopPage({ onAddToCart, onViewProduct }: ShopPageProps) 
               </div>
               {/* Origin */}
               <div>
-                <p className="text-caption uppercase tracking-[0.15em] text-midnight-200 font-sans font-medium mb-3">Origin</p>
+                <p className="text-caption uppercase tracking-[0.15em] text-charcoal-200 font-sans font-medium mb-3">Origin</p>
                 <div className="flex flex-wrap gap-2">
                   {originFilters.map(o => (
                     <button
@@ -138,8 +138,8 @@ export default function ShopPage({ onAddToCart, onViewProduct }: ShopPageProps) 
                       onClick={() => setOrigin(o)}
                       className={`px-3 py-1.5 text-[11px] font-sans font-medium uppercase tracking-[0.08em] rounded-sm border transition-colors ${
                         origin === o
-                          ? 'bg-midnight-500 text-cream-100 border-midnight-500'
-                          : 'border-cream-400 text-midnight-400 hover:border-midnight-200'
+                          ? 'bg-roast-500 text-cream-100 border-roast-500'
+                          : 'border-cream-400 text-roast-400 hover:border-roast-300'
                       }`}
                     >
                       {o === 'all' ? 'All' : o}
@@ -149,7 +149,7 @@ export default function ShopPage({ onAddToCart, onViewProduct }: ShopPageProps) 
               </div>
               {/* Brew Method */}
               <div>
-                <p className="text-caption uppercase tracking-[0.15em] text-midnight-200 font-sans font-medium mb-3">Brew Method</p>
+                <p className="text-caption uppercase tracking-[0.15em] text-charcoal-200 font-sans font-medium mb-3">Brew Method</p>
                 <div className="flex flex-wrap gap-2">
                   {brewFilters.map(b => (
                     <button
@@ -157,8 +157,8 @@ export default function ShopPage({ onAddToCart, onViewProduct }: ShopPageProps) 
                       onClick={() => setBrew(b)}
                       className={`px-3 py-1.5 text-[11px] font-sans font-medium uppercase tracking-[0.08em] rounded-sm border transition-colors ${
                         brew === b
-                          ? 'bg-midnight-500 text-cream-100 border-midnight-500'
-                          : 'border-cream-400 text-midnight-400 hover:border-midnight-200'
+                          ? 'bg-roast-500 text-cream-100 border-roast-500'
+                          : 'border-cream-400 text-roast-400 hover:border-roast-300'
                       }`}
                     >
                       {b === 'all' ? 'All' : b}
@@ -168,7 +168,7 @@ export default function ShopPage({ onAddToCart, onViewProduct }: ShopPageProps) 
               </div>
               {/* Format */}
               <div>
-                <p className="text-caption uppercase tracking-[0.15em] text-midnight-200 font-sans font-medium mb-3">Format</p>
+                <p className="text-caption uppercase tracking-[0.15em] text-charcoal-200 font-sans font-medium mb-3">Format</p>
                 <div className="flex flex-wrap gap-2">
                   {formatFilters.map(f => (
                     <button
@@ -176,8 +176,8 @@ export default function ShopPage({ onAddToCart, onViewProduct }: ShopPageProps) 
                       onClick={() => setFormat(f)}
                       className={`px-3 py-1.5 text-[11px] font-sans font-medium uppercase tracking-[0.08em] rounded-sm border transition-colors ${
                         format === f
-                          ? 'bg-midnight-500 text-cream-100 border-midnight-500'
-                          : 'border-cream-400 text-midnight-400 hover:border-midnight-200'
+                          ? 'bg-roast-500 text-cream-100 border-roast-500'
+                          : 'border-cream-400 text-roast-400 hover:border-roast-300'
                       }`}
                     >
                       {f === 'all' ? 'All' : f.replace('-', ' ')}
@@ -191,18 +191,18 @@ export default function ShopPage({ onAddToCart, onViewProduct }: ShopPageProps) 
 
         {/* Results */}
         <div className="mb-6 flex items-center justify-between">
-          <p className="text-body-sm font-sans text-midnight-200">
+          <p className="text-body-sm font-sans text-charcoal-200">
             {filtered.length} {filtered.length === 1 ? 'coffee' : 'coffees'}
           </p>
         </div>
 
         {filtered.length === 0 ? (
           <div className="py-20 text-center">
-            <p className="font-serif text-h3 text-midnight-400 mb-3">No coffees match your filters</p>
-            <p className="text-body font-sans text-midnight-200 mb-6">Try adjusting your selection or browse all coffees.</p>
+            <p className="font-serif text-h3 text-roast-400 mb-3">No coffees match your filters</p>
+            <p className="text-body font-sans text-charcoal-200 mb-6">Try adjusting your selection or browse all coffees.</p>
             <button
               onClick={clearFilters}
-              className="px-6 py-3 bg-midnight-500 text-cream-100 font-sans font-medium text-sm uppercase tracking-[0.08em] rounded-sm hover:bg-midnight-600 transition-colors"
+              className="px-6 py-3 bg-roast-500 text-cream-100 font-sans font-medium text-sm uppercase tracking-[0.08em] rounded-sm hover:bg-roast-600 transition-colors"
             >
               Clear Filters
             </button>

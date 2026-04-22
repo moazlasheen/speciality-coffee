@@ -46,20 +46,20 @@ export default function HomePage({ onNavigate, onAddToCart, onViewProduct }: Hom
             alt="Coffee beans being roasted"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-midnight-500 via-midnight-500/60 to-midnight-500/20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-roast-500 via-roast-500/60 to-roast-500/20" />
         </div>
 
         <div className="relative z-10 max-w-[1400px] mx-auto px-5 md:px-8 pb-16 md:pb-22 pt-32 w-full">
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-6 editorial-fade">
-              <div className="w-8 h-px bg-terra-300" />
-              <span className="text-caption uppercase tracking-[0.25em] text-terra-200 font-sans font-medium">
+              <div className="w-8 h-px bg-ember-300" />
+              <span className="text-caption uppercase tracking-[0.25em] text-ember-200 font-sans font-medium">
                 Specialty Coffee Roasters
               </span>
             </div>
             <h1 className="font-serif text-display text-cream-100 mb-6 editorial-fade delay-100 text-balance">
               Coffee with a<br />
-              <em className="text-terra-200">sense of place</em>
+              <em className="text-ember-200">sense of place</em>
             </h1>
             <p className="text-body-lg font-sans text-cream-300/80 max-w-lg mb-10 editorial-fade delay-200 leading-relaxed">
               Single-origin beans sourced directly from farmers, roasted in small batches to reveal the terroir of each origin.
@@ -67,7 +67,7 @@ export default function HomePage({ onNavigate, onAddToCart, onViewProduct }: Hom
             <div className="flex flex-wrap gap-4 editorial-fade delay-300">
               <button
                 onClick={() => onNavigate('shop')}
-                className="flex items-center gap-2.5 px-7 py-4 bg-terra-300 text-white font-sans font-medium text-sm uppercase tracking-[0.08em] rounded-sm hover:bg-terra-400 transition-colors"
+                className="flex items-center gap-2.5 px-7 py-4 bg-ember-300 text-white font-sans font-medium text-sm uppercase tracking-[0.08em] rounded-sm hover:bg-ember-400 transition-colors"
               >
                 Shop Coffee
                 <ArrowRight className="w-4 h-4" />
@@ -92,7 +92,7 @@ export default function HomePage({ onNavigate, onAddToCart, onViewProduct }: Hom
       </section>
 
       {/* ===== TRUST BAR ===== */}
-      <section className="bg-midnight-500 border-b border-midnight-300/15">
+      <section className="bg-cream-100 border-b border-cream-400">
         <div className="max-w-[1400px] mx-auto px-5 md:px-8 py-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {[
@@ -102,8 +102,8 @@ export default function HomePage({ onNavigate, onAddToCart, onViewProduct }: Hom
               { icon: Truck, text: 'Free Shipping $40+' },
             ].map(({ icon: Icon, text }) => (
               <div key={text} className="flex items-center gap-3">
-                <Icon className="w-4 h-4 text-terra-300 flex-shrink-0" />
-                <span className="text-body-sm font-sans text-cream-300">{text}</span>
+                <Icon className="w-4 h-4 text-ember-300 flex-shrink-0" />
+                <span className="text-body-sm font-sans text-roast-400">{text}</span>
               </div>
             ))}
           </div>
@@ -134,13 +134,13 @@ export default function HomePage({ onNavigate, onAddToCart, onViewProduct }: Hom
             <div className="flex items-end justify-between mb-10">
               <div>
                 <SectionLabel label="The Collection" className="mb-4" />
-                <h2 className="font-serif text-h2 text-midnight-500">
+                <h2 className="font-serif text-h2 text-roast-500">
                   Explore our origins
                 </h2>
               </div>
               <button
                 onClick={() => onNavigate('shop')}
-                className="hidden md:flex items-center gap-1.5 text-body-sm font-sans font-medium text-terra-300 hover:text-terra-400 transition-colors"
+                className="hidden md:flex items-center gap-1.5 text-body-sm font-sans font-medium text-ember-300 hover:text-ember-400 transition-colors"
               >
                 View All
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -164,7 +164,7 @@ export default function HomePage({ onNavigate, onAddToCart, onViewProduct }: Hom
             <div className="mt-10 text-center md:hidden">
               <button
                 onClick={() => onNavigate('shop')}
-                className="inline-flex items-center gap-2 px-6 py-3 border border-midnight-400 text-midnight-500 font-sans font-medium text-sm uppercase tracking-[0.08em] rounded-sm hover:bg-midnight-500 hover:text-cream-100 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 border border-roast-400 text-roast-500 font-sans font-medium text-sm uppercase tracking-[0.08em] rounded-sm hover:bg-roast-500 hover:text-cream-100 transition-colors"
               >
                 View All Coffee
                 <ArrowRight className="w-4 h-4" />
@@ -182,7 +182,7 @@ export default function HomePage({ onNavigate, onAddToCart, onViewProduct }: Hom
             alt="Coffee farm landscape"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-midnight-500/80" />
+          <div className="absolute inset-0 bg-roast-500/80" />
         </div>
 
         <div className="relative z-10 max-w-[1400px] mx-auto px-5 md:px-8">
@@ -215,7 +215,7 @@ export default function HomePage({ onNavigate, onAddToCart, onViewProduct }: Hom
                   { number: '72hr', label: 'Roast to Door' },
                 ].map(stat => (
                   <div key={stat.label} className="p-5 md:p-6 border border-cream-300/15 rounded-sm">
-                    <p className="font-serif text-h2 text-terra-200 mb-1">{stat.number}</p>
+                    <p className="font-serif text-h2 text-ember-200 mb-1">{stat.number}</p>
                     <p className="text-caption uppercase tracking-[0.1em] text-cream-400/60 font-sans">{stat.label}</p>
                   </div>
                 ))}
@@ -240,23 +240,23 @@ export default function HomePage({ onNavigate, onAddToCart, onViewProduct }: Hom
                 </div>
                 <div className="md:col-span-3 p-8 md:p-14 flex flex-col justify-center">
                   <SectionLabel label="Subscribe & Save 15%" className="mb-5" />
-                  <h2 className="font-serif text-h2 text-midnight-500 mb-4 text-balance">
+                  <h2 className="font-serif text-h2 text-roast-500 mb-4 text-balance">
                     Never run out of<br />exceptional coffee
                   </h2>
-                  <p className="text-body font-sans text-midnight-200 leading-relaxed mb-8 max-w-md">
+                  <p className="text-body font-sans text-charcoal-300 leading-relaxed mb-8 max-w-md">
                     Choose your frequency, pick your roast (or let us surprise you), and enjoy freshly roasted coffee delivered to your door. Pause or cancel anytime.
                   </p>
                   <div className="flex flex-wrap gap-4">
                     <button
                       onClick={() => onNavigate('subscription')}
-                      className="flex items-center gap-2.5 px-7 py-4 bg-midnight-500 text-cream-100 font-sans font-medium text-sm uppercase tracking-[0.08em] rounded-sm hover:bg-midnight-600 transition-colors"
+                      className="flex items-center gap-2.5 px-7 py-4 bg-roast-500 text-cream-100 font-sans font-medium text-sm uppercase tracking-[0.08em] rounded-sm hover:bg-roast-600 transition-colors"
                     >
                       Build Your Subscription
                       <ArrowRight className="w-4 h-4" />
                     </button>
-                    <div className="flex items-center gap-2 text-body-sm font-sans text-midnight-200">
+                    <div className="flex items-center gap-2 text-body-sm font-sans text-charcoal-200">
                       <span>From</span>
-                      <span className="font-serif text-lg text-midnight-500">$16.95</span>
+                      <span className="font-serif text-lg text-roast-500">$16.95</span>
                       <span>/ bag</span>
                     </div>
                   </div>
@@ -274,13 +274,13 @@ export default function HomePage({ onNavigate, onAddToCart, onViewProduct }: Hom
             <div className="flex items-end justify-between mb-10">
               <div>
                 <SectionLabel label="Testimonials" className="mb-4" />
-                <h2 className="font-serif text-h2 text-midnight-500">
+                <h2 className="font-serif text-h2 text-roast-500">
                   What our community says
                 </h2>
               </div>
               <div className="hidden md:flex items-center gap-2">
                 {pressLogos.map(name => (
-                  <span key={name} className="px-4 py-2 text-caption font-sans font-medium text-midnight-200 uppercase tracking-[0.1em]">
+                  <span key={name} className="px-4 py-2 text-caption font-sans font-medium text-charcoal-200 uppercase tracking-[0.1em]">
                     {name}
                   </span>
                 ))}
@@ -305,13 +305,13 @@ export default function HomePage({ onNavigate, onAddToCart, onViewProduct }: Hom
             <div className="flex items-end justify-between mb-10">
               <div>
                 <SectionLabel label="The Journal" className="mb-4" />
-                <h2 className="font-serif text-h2 text-midnight-500">
+                <h2 className="font-serif text-h2 text-roast-500">
                   Stories & guides
                 </h2>
               </div>
               <button
                 onClick={() => onNavigate('blog')}
-                className="hidden md:flex items-center gap-1.5 text-body-sm font-sans font-medium text-terra-300 hover:text-terra-400 transition-colors"
+                className="hidden md:flex items-center gap-1.5 text-body-sm font-sans font-medium text-ember-300 hover:text-ember-400 transition-colors"
               >
                 All Articles
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -332,15 +332,15 @@ export default function HomePage({ onNavigate, onAddToCart, onViewProduct }: Hom
                     />
                   </div>
                   <div className="flex items-center gap-3 mb-3">
-                    <span className="text-caption uppercase tracking-[0.15em] text-teal-300 font-sans font-medium">
+                    <span className="text-caption uppercase tracking-[0.15em] text-ember-300 font-sans font-medium">
                       {post.category}
                     </span>
-                    <span className="text-caption text-midnight-200 font-sans">{post.readTime}</span>
+                    <span className="text-caption text-charcoal-200 font-sans">{post.readTime}</span>
                   </div>
-                  <h3 className="font-serif text-h4 text-midnight-500 mb-2 group-hover:text-terra-300 transition-colors">
+                  <h3 className="font-serif text-h4 text-roast-500 mb-2 group-hover:text-ember-400 transition-colors">
                     {post.title}
                   </h3>
-                  <p className="text-body-sm font-sans text-midnight-200 line-clamp-2">
+                  <p className="text-body-sm font-sans text-charcoal-300 line-clamp-2">
                     {post.excerpt}
                   </p>
                 </article>

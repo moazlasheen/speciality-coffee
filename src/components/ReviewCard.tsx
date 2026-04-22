@@ -13,19 +13,19 @@ export default function ReviewCard({ review }: ReviewCardProps) {
         {Array.from({ length: 5 }).map((_, i) => (
           <Star
             key={i}
-            className={`w-3.5 h-3.5 ${i < review.rating ? 'fill-terra-300 text-terra-300' : 'text-cream-400'}`}
+            className={`w-3.5 h-3.5 ${i < review.rating ? 'fill-ember-300 text-ember-300' : 'text-cream-400'}`}
           />
         ))}
       </div>
-      <p className="text-body font-sans text-midnight-400 leading-relaxed mb-5 italic">
+      <p className="text-body font-sans text-roast-400 leading-relaxed mb-5 italic">
         "{review.text}"
       </p>
       <div className="flex items-center justify-between">
         <div>
-          <p className="text-body-sm font-sans font-medium text-midnight-500">{review.name}</p>
-          <p className="text-caption text-rose-400 font-sans">on {review.product}</p>
+          <p className="text-body-sm font-sans font-medium text-roast-500">{review.name}</p>
+          <p className="text-caption text-charcoal-200 font-sans">on {review.product}</p>
         </div>
-        <p className="text-caption text-midnight-200 font-sans">{review.date}</p>
+        <p className="text-caption text-charcoal-200 font-sans">{review.date}</p>
       </div>
     </div>
   );
